@@ -22,7 +22,7 @@ FROM python:3.11-buster AS app
 WORKDIR /app
 
 # Copy application code from the builder stage
-COPY --from=builder /. /.
+COPY --from=builder /app /app
 
 # Expose port 8000 for FastAPI
 EXPOSE 8000
